@@ -1,0 +1,24 @@
+:root{--bg:#e8ddcb;--panel:#f2eadc;--ink:#33281f;--soft:#6e5f50;--line:#cdbfa8;--accent:#7d4a2c;
+--allow:#5f6b43;--mask:#a97b2a;--block:#8a3a2d;--auth:#7a5a3c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Charter,"Iowan Old Style",Georgia,serif;font-weight:600;margin:.2em 0}
+h1{font-size:1.9rem}h2{font-size:1.3rem}h3{font-size:1.02rem;margin-top:1.1em}
+header,main{max-width:62rem;margin:0 auto;padding:1.2rem}
+header p{margin:.1rem 0 .8rem;color:var(--soft)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;margin-bottom:1.1rem}
+textarea,input,select{width:100%;font:inherit;color:var(--ink);background:#faf5ec;border:1px solid var(--line);border-radius:4px;padding:.5rem}
+.key input{max-width:22rem;display:block}.key{color:var(--soft);font-size:.92rem}
+.row{display:flex;gap:1rem;align-items:end;flex-wrap:wrap;margin-top:.8rem}
+.row label{flex:1;min-width:12rem;color:var(--soft);font-size:.92rem}
+button{font:inherit;background:var(--accent);color:#f7efe2;border:0;border-radius:4px;padding:.55rem 1.2rem;cursor:pointer}
+button:hover{background:#6a3d23}button.quiet{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+:focus-visible{outline:3px solid #b98a4e;outline-offset:2px}
+pre{white-space:pre-wrap;word-break:break-word;background:#faf5ec;border:1px solid var(--line);border-radius:4px;padding:.7rem;margin:.3rem 0;font:inherit}
+mark{background:#e0b878;color:var(--ink);padding:0 .15em;border-radius:2px}
+.badge{font:600 .85rem system-ui;color:#f7efe2;padding:.15rem .6rem;border-radius:3px;vertical-align:middle;margin-left:.4rem}
+.badge.allow{background:var(--allow)}.badge.mask{background:var(--mask)}.badge.block{background:var(--block)}.badge.require_authorization{background:var(--auth)}
+.small{color:var(--soft);font-size:.9rem}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);white-space:nowrap}
+#msg{color:var(--block);min-height:1.4em}

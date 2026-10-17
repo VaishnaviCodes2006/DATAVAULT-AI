@@ -1,0 +1,22 @@
+[
+ {"text":"Summarize the quarterly roadmap for the mobile team.","entities":[],"action":"allow"},
+ {"text":"What is the capital of France and why is it famous?","entities":[],"action":"allow"},
+ {"text":"Draft a polite reminder about the meeting on 12 March at 3 pm.","entities":[],"action":"allow"},
+ {"text":"Explain how a binary search works in 5 steps.","entities":[],"action":"allow"},
+ {"text":"Order 123456789 shipped on time, please confirm.","entities":[],"action":"allow"},
+ {"text":"Please summarize this customer record: John Smith, john@example.com, account number 123456789.","entities":["PERSON","EMAIL","ACCOUNT_ID"],"action":"mask"},
+ {"text":"Email maria.garcia@example.org about the invoice.","entities":["EMAIL"],"action":"mask"},
+ {"text":"Call me on 555-123-4567 tomorrow.","entities":["PHONE"],"action":"mask"},
+ {"text":"Reach the client at +91 9876543210 for the demo.","entities":["PHONE"],"action":"mask"},
+ {"text":"Dr. Priya Sharma reviewed the file.","entities":["PERSON"],"action":"mask"},
+ {"text":"My name is Alan Turing and I need a cover letter.","entities":["PERSON"],"action":"mask"},
+ {"text":"Refund account no: 99887766 for the order.","entities":["ACCOUNT_ID"],"action":"mask"},
+ {"text":"Card 4111 1111 1111 1111 was declined.","entities":["CREDIT_CARD"],"action":"mask"},
+ {"text":"Number 4111 1111 1111 1112 is a typo, ignore it.","entities":[],"action":"allow"},
+ {"text":"Use api_key=sk-FAKEFAKEFAKEFAKE12345678 to call the service.","entities":["SECRET"],"action":"block"},
+ {"text":"password: Tr0ub4dor-fake! for the demo server","entities":["SECRET"],"action":"block"},
+ {"text":"Authorization: Bearer abcdEFGH1234567890fakeTOKEN","entities":["SECRET"],"action":"block"},
+ {"text":"Key AKIAFAKEFAKEFAKE1234 leaked in the log.","entities":["SECRET"],"action":"block"},
+ {"text":"SSN 123-45-6789 belongs to the applicant.","entities":["SSN"],"action":"block"},
+ {"text":"-----BEGIN RSA PRIVATE KEY----- MIIfake","entities":["SECRET"],"action":"block"}
+]

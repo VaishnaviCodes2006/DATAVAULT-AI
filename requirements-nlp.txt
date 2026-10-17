@@ -1,0 +1,5 @@
+# OPTIONAL name recognition (Presidio + spaCy). Check s390x wheel availability first;
+# if install fails, the gateway runs with its built-in rules and says so in /healthz.
+presidio-analyzer==2.2.357
+spacy==3.8.3
+# then: python -m spacy download en_core_web_sm

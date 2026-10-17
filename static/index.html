@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataVault AI</title>
+<link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header><h1>DataVault AI</h1><p>Check a prompt before it reaches an AI service.</p>
+<label class="key">API key <input id="key" type="password" autocomplete="off" spellcheck="false"></label></header>
+<main>
+<section class="panel">
+  <h2>Your prompt</h2>
+  <textarea id="text" rows="9" maxlength="20000" placeholder="Paste a prompt or document text. Use synthetic data for demos."></textarea>
+  <div class="row">
+    <label>Destination <select id="dest"><option value="approved_ai">approved_ai</option><option value="restricted_ai">restricted_ai</option><option value="unknown_service">unknown_service</option></select></label>
+    <button id="go">Check and send</button>
+  </div>
+  <p id="msg" role="status"></p>
+</section>
+<section class="panel" id="result" hidden>
+  <h2>Result <span id="badge" class="badge"></span></h2>
+  <p id="reasons"></p>
+  <h3>Detected in your text</h3><pre id="orig"></pre>
+  <h3>Sent to the AI service</h3><pre id="san"></pre>
+  <p id="ai"></p><p class="small" id="meta"></p>
+</section>
+<section class="panel">
+  <h2>Audit trail</h2>
+  <p class="small">Metadata only. Original prompts are never stored. Analyst and admin keys only.</p>
+  <button id="refresh" class="quiet">Refresh</button>
+  <div id="metrics" class="small"></div>
+  <div class="scroll"><table id="events"><thead><tr><th>Time</th><th>Event</th><th>Role</th><th>Destination</th><th>Categories</th><th>Action</th><th>ms</th></tr></thead><tbody></tbody></table></div>
+</section>
+</main>
+<script src="/static/app.js"></script></body></html>

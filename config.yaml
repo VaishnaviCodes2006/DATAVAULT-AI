@@ -1,0 +1,14 @@
+# Policy configuration. Precedence when several rules fire: block > require_authorization > mask > allow
+max_input_chars: 20000
+restricted_markers: ["TOP SECRET", "RESTRICTED"]   # marks a document as restricted
+destinations:                                       # unknown destinations are always blocked
+  approved_ai:   { allowed_roles: [user, analyst, admin] }
+  restricted_ai: { allowed_roles: [admin] }
+categories:
+  EMAIL:       { sensitivity: low,    action: mask,  label: "[EMAIL]" }
+  PHONE:       { sensitivity: low,    action: mask,  label: "[PHONE]" }
+  PERSON:      { sensitivity: low,    action: mask,  label: "[PERSON]" }
+  ACCOUNT_ID:  { sensitivity: medium, action: mask,  label: "[ACCOUNT_ID]" }
+  CREDIT_CARD: { sensitivity: medium, action: mask,  label: "[CARD]" }
+  SSN:         { sensitivity: high,   action: block, label: "[SSN]" }
+  SECRET:      { sensitivity: high,   action: block, label: "[SECRET]" }
