@@ -10,12 +10,12 @@ documents, detects configured sensitive information, classifies the risk, applie
 privacy-conscious audit event. The prototype focuses on a demonstrable workflow: detect → decide → protect →
 audit.
 
-Features
-Prompt inspection
-Policy enforcement
-Audit logging
-Docker deployment
-Render hosting
+Features,
+Prompt inspection,
+Policy enforcement,
+Audit logging,
+Docker deployment,
+Render hosting.
 
 
 
